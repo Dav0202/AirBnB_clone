@@ -1,6 +1,6 @@
 # AirBnB clone - The console
 
-![bnb_screenshot](https://github.com/yordigenet/AirBnB_clone/blob/master/img_readme/Airbnb_screenshot.PNG/)
+![bnb_screenshot](https://github.com/yordigenet/AirBnB_clone/blob/396c43efe2c1bcb89b76051282d3271f290bd987/img_readme/Airbnb_screenshot.PNG/)
 ## Description
 
 This team project is part of the ALX Software Engineer program.
