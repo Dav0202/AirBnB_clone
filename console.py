@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-
 """ AirBnB Console by David"""
 
 from models.base_model import BaseModel
