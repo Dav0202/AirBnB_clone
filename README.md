@@ -1,7 +1,6 @@
-This project is the first step towards building a full web application: the AirBnB clone.
 # AirBnB clone - The console
 
-![bnb_screenshot](https://github.com/yordigenet/AirBnB_clone/blob/master/img_readme/Airbnb_screenshot.png/)
+![bnb_screenshot](https://github.com/yordigenet/AirBnB_clone/blob/master/img_readme/Airbnb_screenshot.PNG/)
 ## Description
 
 This team project is part of the ALX Software Engineer program.
