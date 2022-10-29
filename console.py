@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-""" AirBnB Console by David"""
+"""AirBnB Console by David
+Contains the class for the AirBnB clone console
+"""
 
 from models.base_model import BaseModel
 from models.user import User
