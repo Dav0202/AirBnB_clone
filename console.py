@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-"""AirBnB Console by David
-Contains the class for the AirBnB clone console
+"""
+AirBnB Console by David
+Contains the entry point of the command interpreter
 """
 
+import cmd
+import sys
 from models.base_model import BaseModel
 from models.user import User
 from models.state import State
@@ -11,8 +14,6 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 from models import storage
-import cmd
-import sys
 
 
 class HBNBCommand(cmd.Cmd):
@@ -21,11 +22,15 @@ class HBNBCommand(cmd.Cmd):
     __all_17 = 0
 
     def emptyline(self):
-        """Pass if no command is given"""
+        """
+        Pass if no command is given
+        """
         pass
 
     def precmd(self, line):
-        """ Edit given command to allow second type of input"""
+        """ 
+        Edit given command to allow second type of input
+        """
         if not sys.stdin.isatty():
             print()
         if '.' in line:
@@ -37,16 +42,16 @@ class HBNBCommand(cmd.Cmd):
         return cmd.Cmd.precmd(self, line)
 
     def do_quit(self, arg):
-        'Quit command to exit the program'
+        """Quit command to exit the program"""
         return True
 
     def do_EOF(self, arg):
-        'EOF command to exit the program'
+        """EOF command to exit the program"""
         print()
         return True
 
     def do_create(self, arg):
-        "Create an instance if the Model exists"
+        """Create an instance if the Model exists"""
         if not arg:
             print("** class name missing **")
             return None
@@ -58,7 +63,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class doesn't exist **")
 
     def do_show(self, arg):
-        "Print dict of a instance in base of it's ID"
+        """Print dict of a instance in base of it's ID"""
         cmd_argv = arg.split()
         if not cmd_argv:
             print("** class name missing **")
@@ -84,7 +89,7 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_all(self, arg):
-        "Print all the instances saved in file.json"
+        """Print all the instances saved in file.json"""
         cmd_argv = arg.split()
 
         if cmd_argv:
@@ -115,8 +120,8 @@ class HBNBCommand(cmd.Cmd):
         print("]")
 
     def do_destroy(self, arg):
-        "Deletes an instance based on it's ID and save the changes\n \
-        Usage: destroy <class name> <id>"
+        """Deletes an instance based on it's ID and save the changes
+        Usage: destroy <class name> <id>"""
 
         cmd_argv = arg.split()
         if not cmd_argv:
@@ -144,7 +149,7 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_update(self, arg):
-        "Usage: update <class name> <id> <attribute name> <attribute value>"
+        """Usage: update <class name> <id> <attribute name> <attribute value>"""
         cmd_argv = []
         part2_argv = []
         is_dict = 0
@@ -223,7 +228,7 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
 
     def do_count(self, arg):
-        "Usage: count <class name> or <class name>.count()"
+        """Usage: count <class name> or <class name>.count()"""
         cmd_argv = arg.split()
 
         if cmd_argv:
